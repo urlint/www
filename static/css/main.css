@@ -869,3 +869,19 @@ td.hljs-ln-code {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" style="font-size:14px"><text y="16">🦄</text></svg>'),
     auto;
 }
+
+.blinker {
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1,0,0,1);
+  animation-duration: 1s;
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(white,.3);
+}
+
+@keyframes blinker {
+  from { opacity: 1.0; } to { opacity: 0.0; }
+}
