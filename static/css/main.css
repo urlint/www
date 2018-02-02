@@ -242,7 +242,7 @@ img {
 }
 
 .container-lrg {
-  max-width: 1020px;
+  max-width: 1024px;
 }
 
 .container {
@@ -884,4 +884,14 @@ td.hljs-ln-code {
 
 @keyframes blinker {
   from { opacity: 1.0; } to { opacity: 0.0; }
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Aligner-item {
+  max-width: 50%;
 }
