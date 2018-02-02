@@ -892,6 +892,20 @@ td.hljs-ln-code {
   justify-content: center;
 }
 
-.Aligner-item {
-  max-width: 50%;
+@media screen and (max-width: 820px) {
+  .Aligner {
+    padding: 20px 0;
+  }
+
+  .mt20-s {
+    margin-top: 20px;
+  }
+
+  .pt0-s {
+    padding-top: 0;
+  }
+
+  .pb0-s {
+    padding-bottom: 0;
+  }
 }
