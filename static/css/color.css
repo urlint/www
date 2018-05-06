@@ -2,7 +2,7 @@
 .black-flat .secondary-bg { background-color: #27224F }
 .black-flat .accent-bg { background-color: #4736CA }
 .black-flat .primary-color { color: #FFFFFF }
-.black-flat .secondary-color { color: #E0DDF6 }
+.black-flat .secondary-color { color: #8F8F8F }
 .black-flat .svg-fill { fill: #FFFFFF }
 
 .black-gradient { background: linear-gradient(#27224F, #000000) }
@@ -32,3 +32,19 @@
 .black-white .primary-color { color: #000000 }
 .black-white .secondary-color { color: #8F8F8F }
 .black-white .svg-fill { fill: #4736ca }
+
+::selection {
+  background-color: #ffe079;
+  color: #000;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+img::selection,
+b::selection {
+  background-color: #ffc533;
+}
