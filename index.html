@@ -71,7 +71,7 @@
           <h1 class="heading-lrg primary-color">Check your URLs</h1>
           <h2 class="subheading secondary-color mt20">keep your links up to date ✨</h2>
           <div class="mt40">
-            <div class="button button__outline mobile-text-center mt10 mr10 mobile-text-center accent-bg primary-color">
+            <div class="user-select button button__outline mobile-text-center mt10 mr10 mobile-text-center accent-bg primary-color">
               <span> npm install urlint-cli -g</span>
               <span class="black-white blinker"></span>
             </div>
@@ -188,11 +188,23 @@
               How to integrate it?
             </b>
             <p class="paragraph secondary-color launchaco-builder-hoverable mt20">
-              Although you can run <b class="bold paragraph primary-color">urlint</b> on demand, the most powerful way to use it is as part of your Continous Integration System.
+              Although you can run `<b class="bold paragraph primary-color">urlint</b>` on demand, the most powerful way to use it is as part of your Continous Integration System (Travis, GitLab, Jenkins, CircleCI, ...).
             </p>
             <p class="paragraph secondary-color launchaco-builder-hoverable mt20">
-              Add it after deploy to check all is working as you expected. This is specially useful when you are creating static websites.
+              This is an <a class="link accent bold paragraph primary-color" target="_blank" href="https://travis-ci.org/Kikobeats/kikobeats.com/jobs/375815098#L2101">example on Travis CI</a> executing it after a successful build
             </p>
+            <div class="mt40 mb40">
+              <pre class="user-select paragraph terciary-color black-light-flat">
+                <code>
+language: node_js
+
+node_js:
+  - "node"
+
+script:
+  - npx urlint https://kikobeats.com --whitelist https://www.linkedin.com/in/kikobeats</code>
+              </pre>
+            </div>
             <p class="paragraph secondary-color launchaco-builder-hoverable mt20">
               Another approach could be run it periodically as a crontab, you check links availability over the time.
             </p>

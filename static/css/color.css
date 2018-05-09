@@ -3,6 +3,8 @@
 .black-flat .accent-bg { background-color: #4736CA }
 .black-flat .primary-color { color: #FFFFFF }
 .black-flat .secondary-color { color: #8F8F8F }
+.black-flat .accent { color: #50e3c2 }
+.black-flat .terciary-color { color: #CCC }
 .black-flat .svg-fill { fill: #FFFFFF }
 
 .black-gradient { background: linear-gradient(#27224F, #000000) }

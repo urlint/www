@@ -173,12 +173,16 @@ img {
   -webkit-transition: all 0.22s;
   transition: all 0.22s;
 }
-.button__outline {
-  cursor: auto;
+
+.user-select {
   -webkit-user-select: all;
   -moz-user-select: all;
   -ms-user-select: all;
   user-select: all;
+}
+
+.button__outline {
+  cursor: auto;
 }
 .button:not(.button__outline):hover {
   -webkit-transform: translateY(-2px);
@@ -773,4 +777,34 @@ td.hljs-ln-code {
 
 @keyframes blinker {
   from { opacity: 1.0; } to { opacity: 0.0; }
+}
+
+pre {
+  border: 1px solid #8F8F8F;
+  white-space: pre;
+  display: block;
+  white-space: pre;
+  margin: 1em 0px;
+  overflow-x: auto;
+  font-size: .75rem;
+  line-height: 20px;
+  padding: 0 25px;
+  border-radius: 2px;
+}
+
+.link {
+  text-decoration: underline;
+  opacity: 1;
+  transition: opacity .15s ease-in;
+}
+
+.link:hover,
+.link:focus {
+  opacity:.5;
+  transition:opacity .15s ease-in;
+}
+
+.dim:active {
+  opacity:.8;
+  transition:opacity .15s ease-out;
 }
