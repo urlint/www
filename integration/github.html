@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <title>GitHub integration for urlint</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- Search Engine -->
+  <meta name="description" content="Check your URLs, keep your links up to date ✨">
+  <meta name="image" content="https://urlint.co/static/images/preview.png">
+  <link rel="canonical" href="https://urlint.co" />
+
+  <!-- Schema.org for Google -->
+  <meta itemprop="name" content="urlint">
+  <meta itemprop="description" content="Check your URLs, keep your links up to date ✨">
+  <meta itemprop="image" content="https://urlint.co/static/images/preview.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="urlint">
+  <meta name="twitter:description" content="Check your URLs, keep your links up to date ✨">
+  <meta name="twitter:image" content="https://urlint.co/static/images/preview.png">
+  <meta name="twitter:logo" content="https://urlint.co/static/images/logo.png">
+  <meta name="twitter:label1" value="Install"/>
+  <meta name="twitter:data1" value="npm install urlint-cli -g"/>
+  <meta name="twitter:label2" value="GitHub"/>
+  <meta name="twitter:data2" value="https://github.com/urlint"/>
+
+  <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+  <meta property="og:title" content="urlint">
+  <meta property="og:description" content="Check your URLs, keep your links up to date ✨">
+  <meta property="og:image" content="https://urlint.co/static/images/preview.png">
+  <meta property="og:image:secure_url" content="https://urlint.co/static/images/preview.png">
+  <meta property="og:video:secure_url" content="https://urlint.co/static/video/demo.mp4">
+  <meta property="og:url" content="https://urlint.co">
+
+  <link rel="shortcut icon" href="/static/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:900" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/main.css">
+  <link rel="stylesheet" href="/static/css/color.css">
+</head>
+
+<body class="font-hacker">
+  <div class="black-gradient">
+    <header class="header">
+      <div class="container-lrg">
+        <div class="flex col-12 spread center-horizontal">
+          <a href="/" class="logo">
+              <img src="/static/images/logo.png" alt="urlint logo">
+            </a>
+          <a href="#main-menu" id="menu" class="menu-toggle">
+              <b class="nav-link mr0 secondary-color">☰</b>
+            </a>
+          <nav id="main-menu" role="navigation" class="main-menu">
+            <a href="#" id="main-menu-close" class="menu-close">
+                <span class="bold">✕</span>
+              </a>
+            <a target="_blank" href="https://urlint.us17.list-manage.com/subscribe?u=21b554e959530699e44273f9c&id=9650e15cc3" class="nav-link secondary-color">Subscribe</a>
+            <a href="mailto:hello@urlint.co" class="nav-link secondary-color">Contact</a>
+            <a target="_blank" href="https://changes.now.sh/urlint-cli" class="nav-link secondary-color">Changelog</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+  <section id="faq" class="section black-flat" activepage="Landing">
+      <div class="container">
+        <div class="col-12 text-center">
+          <h3 class="heading primary-color launchaco-builder-hoverable">
+            GitHub integration almost finished 🎉
+          </h3>
+          <p id="token-banner" class="subheading secondary-color mt20 launchaco-builder-hoverable" style="display:none; font-size: 16px;">
+            Your <b class="bold paragraph primary-color">`GITHUB_TOKEN`</b> is <b id="token" class="bold paragraph primary-color">18923981273891273</b>.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-12 mt40">
+          <div class="faq pad20">
+            <b class="subheading bold primary-color launchaco-builder-hoverable">
+              Add your token
+            </b>
+            <p class="paragraph secondary-color launchaco-builder-hoverable mt20">
+              First, make sure Travis is already enabled on your repository.
+            </p>
+            <p class="paragraph secondary-color launchaco-builder-hoverable mt20">
+              Then, go to your Travis’s repo’s settings page
+            </p>
+            <div class="mt50 mb50">
+              <div class="col-12" style="padding: 0;">
+                <img width="100%" src="/static/images/env-variables.png"></img>
+              </div>
+            </div>
+            <p class="paragraph secondary-color launchaco-builder-hoverable mt20 mb50">
+              Add your token there as <b class="bold paragraph primary-color">`GITHUB_TOKEN`</b>.
+            </p>
+            <p class="paragraph secondary-color launchaco-builder-hoverable mt20">
+              Alternatively, you can also use the <a class="link accent bold paragraph primary-color" href="http://rubygems.org/gems/travis" target="_blank">Travis CLI tool</a> to add this to your repo as a secure variable:
+            </p>
+            <div class="mt40 mb40">
+              <pre class="user-select paragraph terciary-color black-light-flat">
+                <code>
+travis encrypt GITHUB_TOKEN="your token here" --add</code>
+              </pre>
+            </div>
+          </div>
+          <div class="faq pad20">
+            <b class="subheading bold primary-color launchaco-builder-hoverable">
+              Add the command
+            </b>
+            <p class="paragraph secondary-color launchaco-builder-hoverable mt20">
+              As part of your continous integration workflow, you need to execute command, adding it into the configuration file
+            </p>
+            <div class="mt40 mb40">
+              <pre class="user-select paragraph terciary-color black-light-flat">
+                <code>
+language: node_js
+
+node_js:
+  - "node"
+
+script:
+  - npx urlint https://kikobeats.com --whitelist https://www.linkedin.com/in/kikobeats</code>
+              </pre>
+            </div>
+            <p class="paragraph secondary-color launchaco-builder-hoverable mt20">
+              Alternatively, you can add it to your <b class="bold paragraph primary-color">`package.json`</b>, for example, as a postcondition when test passed
+            </p>
+            <div class="mt40 mb40">
+              <pre class="user-select paragraph terciary-color black-light-flat">
+                <code>
+"scripts": {
+  "posttest": "urlint https://kikobeats.com --whitelist https://www.linkedin.com/in/kikobeats"
+}
+              </pre>
+            </div>
+          </div>
+          <div class="faq pad20">
+            <b class="subheading bold primary-color launchaco-builder-hoverable">
+              See the status
+            </b>
+            <p class="paragraph secondary-color launchaco-builder-hoverable mt20">
+              Next time the command will be executed you can see the status as part of the pull request information
+            </p>
+            <div class="mt50 mb50">
+              <div class="col-12" style="padding: 0;">
+                <img width="100%" src="/static/images/travis-integration.png"></img>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+  <section id="cta-4" class="section black-flat">
+    <div class="container text-center">
+      <div class="col-12">
+        <h4 class="heading primary-color">Subscribe to newsletter</h4>
+        <p class="paragraph mt20 secondary-color">Early access &amp; updates on new releases.
+
+        </p>
+        <div class="mt40">
+          <form action="https://urlint.us17.list-manage.com/subscribe?u=21b554e959530699e44273f9c&id=9650e15cc3" method="post">
+             <button class="white-color button mt10 primary-color accent-bg">Subscribe me</button>
+           </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer-5" class="section text-center black-flat">
+    <div class="container col-12">
+      <div>
+        <a href="https://twitter.com/kikobeats" title="Twitter" target="_blank" class="socialicons accent-bg twitter"></a>
+        <a href="mailto:hello@urlint.co" title="Mail" class="socialicons accent-bg email"></a>
+        <a href="https://github.com/urlint" title="Github" target="_blank" class="socialicons accent-bg github"></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+
+    var token = getUrlParameter('access_token')
+
+    if (token) {
+      document.getElementById("token").innerHTML = token
+      document.getElementById("token-banner").style.display = 'block'
+    }
+
+  </script>
+</body>
+
+</html>
