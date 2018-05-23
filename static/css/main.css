@@ -810,3 +810,7 @@ pre {
   opacity:.8;
   transition:opacity .15s ease-out;
 }
+
+.br2 {
+  border-radius: 2px;
+}
