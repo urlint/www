@@ -4,4 +4,4 @@
 
 ######
 
-[Install CLI](https://github.com/urlint/urlint-cli) | [Node.js API](https://github.com/urlint/urlint)
+[Install CLI](https://github.com/urlint/urlint) | [Node.js API](https://github.com/urlint/urlint)
