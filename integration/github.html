@@ -86,27 +86,12 @@
               Add your token
             </b>
             <p class="paragraph secondary-color launchaco-builder-hoverable mt20">
-              First, make sure Travis is already enabled on your repository.
-            </p>
-            <p class="paragraph secondary-color launchaco-builder-hoverable mt20">
-              Then, go to your Travis’s repo’s settings page
+              Go to your Continous Integrations repository settings page and add <b class="bold paragraph primary-color">`GITHUB_TOKEN`</b> as <b class="bold paragraph primary-color">Environment Variable</b>.
             </p>
             <div class="mt50 mb50">
               <div class="col-12" style="padding: 0;">
-                <img class="br2" width="100%" src="/static/images/env-variables.jpg"></img>
+                <img class="br2" width="100%" src="/static/images/env-variables.png"></img>
               </div>
-            </div>
-            <p class="paragraph secondary-color launchaco-builder-hoverable mt20 mb50">
-              Add your token there as <b class="bold paragraph primary-color">`GITHUB_TOKEN`</b>.
-            </p>
-            <p class="paragraph secondary-color launchaco-builder-hoverable mt20">
-              Alternatively, you can also use the <a class="link accent bold paragraph primary-color" href="http://rubygems.org/gems/travis" target="_blank">Travis CLI tool</a> to add this to your repo as a secure variable:
-            </p>
-            <div class="mt40 mb40">
-              <pre class="user-select paragraph terciary-color black-light-flat">
-                <code>
-travis encrypt GITHUB_TOKEN="your token here" --add</code>
-              </pre>
             </div>
           </div>
           <div class="faq pad20">
@@ -149,7 +134,7 @@ script:
             </p>
             <div class="mt50 mb50">
               <div class="col-12" style="padding: 0;">
-                <img class="br2" width="100%" src="/static/images/github-integration.jpg"></img>
+                <img class="br2" width="100%" src="/static/images/github-integration.png"></img>
               </div>
             </div>
           </div>
